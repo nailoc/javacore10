@@ -3,8 +3,8 @@ package com.hk.app;
 // 부모클래스 정의
 public class Character {
 	
-	int rx;  // 행
-	int cy;  // 열
+	public int rx;  // 행-모든클래스 접근가능 
+	public int cy;  // 열-모든클래스 접근가능 
 	
 	Character() { 
 		this(0, 0);  // 자신의 생성자를 호출
