@@ -13,8 +13,10 @@ public class CmdAnimal {
 	final static String RABBIT = "♡";
 	final static String GRASS = "♧";
 	
-	static Rabbit bucks = new Rabbit();
+	static Rabbit bucks = new Rabbit(); // Rabbit 참조변수에 대입 -> Character 대신
 	static Grass flower = new Grass();
+	
+	static Character[] chr = new Character[2];
 	
 	static {  // 초기화 블록
 		for(int r=0; r<width; r++) {
@@ -22,6 +24,9 @@ public class CmdAnimal {
 				map[r][c] = 0;    // 빈공간이라고 정의
 			}
 		}
+		
+		chr[0] = new Rabbit();
+		chr[1] = new Grass(); 
 	}
 	
 	// map 배열정보로 화면을 그리는 함수
@@ -41,14 +46,14 @@ public class CmdAnimal {
 	}
 	
 	// 토끼 Character들의 위치 정보로 map정보를 변경
-	public static void changeMapByRabbit(Rabbit rab) {
+	public static void changeMapByRabbit(Character rab) { // Rabbit 클래스의 변수로 맵 정보 변경
 		
 		//rab.rx rab.cy => 토끼의 좌표정보
 		map[rab.rx][rab.cy] = 1;  // 1 은 토끼가 있다는 표시
 	}
 	
 	// 풀 Character들의 위치 정보로 map정보를 변경
-	public static void changeMapByGrass(Grass gr) {
+	public static void changeMapByGrass(Character gr) {
 		map[gr.rx][gr.cy] = 2;	  // 2 는 풀이 있다는 표시
 	}
 	

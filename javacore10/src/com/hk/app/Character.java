@@ -5,6 +5,7 @@ public class Character {
 	
 	public int rx;  // 행-모든클래스 접근가능 
 	public int cy;  // 열-모든클래스 접근가능 
+	// public int ctype; // 0: Charater , 1: Rabbit, 2: Grass
 	
 	Character() { 
 		this(0, 0);  // 자신의 생성자를 호출
